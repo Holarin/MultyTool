@@ -6,21 +6,83 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_above="@+id/scrollfield"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/back"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Back"
+                android:layout_weight="0.3"></Button>
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"></Space>
+            <Switch
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:text="Dark Them"></Switch>
+        </LinearLayout>
+        <ScrollView
+            android:id="@+id/scrollfield"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5">
+            <TextView
+                android:id="@+id/history"
+                style="@style/history_op"
+                android:layout_gravity="bottom"
+                android:text="24+5=23 \n 2+2=4 \n 10+2=0"
+                android:gravity="right"
+                android:layout_marginBottom="10dp"></TextView>
+</ScrollView>
         <TextView
+            android:id="@+id/current"
+            style="@style/current_op"
+            android:layout_gravity="bottom"
+            android:text="24+24"
+            android:gravity="right"
+            android:layout_marginBottom="2dp"></TextView>
+        <TextView
+            android:id="@+id/strequal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="1234567890"
+            android:layout_below="@id/current"
+            android:text="=23"
+            android:textSize="24sp"
             android:gravity="right"
-            android:textSize="32dp"
-            android:layout_marginLeft="10dp">
-
-        </TextView>
+            android:textColor="@android:color/holo_orange_dark"></TextView>
         <TableLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="0dp"
+            android:layout_weight="8"
+            android:layout_gravity="bottom">
             <TableRow
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content">
+                <Button
+                    android:id="@+id/clear"
+                    style="@style/digital_button"
+                    android:text="C"></Button>
+                <Button
+                    android:id="@+id/percen"
+                    style="@style/digital_button"
+                    android:text="%"></Button>
+                <Button
+                    android:id="@+id/division"
+                    style="@style/digital_button"
+                    android:text="/"></Button>
+                <ImageButton
+                    android:id="@+id/delete"
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight="6"
+                    android:src="@drawable/abc_vector_test"></ImageButton>
             </TableRow>
             <TableRow
                 android:layout_height="match_parent"
@@ -32,14 +94,16 @@
                 <Button
                     style="@style/digital_button"
                     android:id="@+id/two"
-                    android:text="2"
-                    ></Button>
+                    android:text="2"></Button>
                 <Button
                     style="@style/digital_button"
                     android:id="@+id/three"
-                    android:text="3">></Button>
+                    android:text="3"></Button>
                 <Button
-                style="@style/operation_button"></Button>
+                    android:id="@+id/plus"
+                    style="@style/operation_button"
+                    android:text="+">
+                </Button>
             </TableRow>
             <TableRow
                 android:layout_height="match_parent"
@@ -53,9 +117,13 @@
                     android:id="@+id/five"
                     android:text="5">></Button>
                 <Button
-                    style="@style/digital_button"   
+                    style="@style/digital_button"
                     android:id="@+id/six"
                     android:text="6">></Button>
+                <Button
+                    android:id="@+id/minus"
+                    style="@style/operation_button"
+                    android:text="-"></Button>
             </TableRow>
             <TableRow
                 android:layout_height="match_parent"
@@ -72,6 +140,29 @@
                     style="@style/digital_button"
                     android:id="@+id/nine"
                     android:text="9">></Button>
+                <Button
+                    style="@style/operation_button"
+                    android:text="*"></Button>
+            </TableRow>
+            <TableRow
+                android:layout_height="match_parent"
+                android:layout_width="match_parent">
+                <Button
+                    android:id="@+id/zero"
+                    style="@style/digital_button"
+                    android:text="0"></Button>
+                <Button
+                    android:id="@+id/dot"
+                    style="@style/digital_button"
+                    android:text="."></Button>
+                <Button
+                    android:id="@+id/plmin"
+                    style="@style/digital_button"
+                    android:text="+/-"></Button>
+                <Button
+                    android:id="@+id/equal"
+                    style="@style/operation_button"
+                    android:text="="></Button>
             </TableRow>
         </TableLayout>
     </LinearLayout>

@@ -9,13 +9,26 @@
 <style name="digital_button">
     <item name="android:layout_width">0dp</item>
     <item name="android:layout_height">wrap_content</item>
-    <item name="android:textSize">13dp</item>
+    <item name="android:textSize">32dp</item>
     <item name="android:layout_weight">5</item>
 </style>
     <style name="operation_button">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_weight">6</item>
-        <item name="android:textSize">13dp</item>
+        <item name="android:textSize">32dp</item>
+        <item name="roundPercent">20</item>
+    </style>
+    <style name="current_op">
+        <item name="android:textSize">28dp</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="history_op">
+        <item name="android:textSize">28dp</item>
+        <item name="android:textColor">@android:color/darker_gray</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
     </style>
 </resources>
